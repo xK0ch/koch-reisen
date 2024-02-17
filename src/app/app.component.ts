@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {NavigationComponent} from "./shared-components/navigation/navigation.component";
+import {ThemeService} from "./services/theme.service";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavigationComponent, NgClass],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'koch-reisen';
+
+  themeService: ThemeService = inject(ThemeService);
 }

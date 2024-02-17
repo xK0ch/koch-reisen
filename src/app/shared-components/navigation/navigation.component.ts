@@ -1,0 +1,39 @@
+import {Component, HostBinding, inject, OnInit} from '@angular/core';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule, MatIconRegistry} from "@angular/material/icon";
+import {DomSanitizer} from "@angular/platform-browser";
+import {MatSlideToggle} from "@angular/material/slide-toggle";
+import {FormControl, ReactiveFormsModule} from "@angular/forms";
+import {ThemeService} from "../../services/theme.service";
+
+@Component({
+  selector: 'app-navigation',
+  standalone: true,
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule, MatSlideToggle,
+    ReactiveFormsModule
+  ],
+  templateUrl: './navigation.component.html',
+  styleUrl: './navigation.component.scss'
+})
+export class NavigationComponent {
+
+  constructor(
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    this.matIconRegistry.addSvgIcon(
+      'airplane',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/koch-reisen-airplane.svg')
+    );
+  }
+
+  themeService: ThemeService = inject(ThemeService);
+
+  toggleTheme() {
+    this.themeService.updateTheme();
+  }
+}

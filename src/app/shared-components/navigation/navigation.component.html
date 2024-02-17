@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <mat-icon svgIcon="airplane" class="airplane"></mat-icon>
+  <button mat-button class="first-button">
+    <mat-icon>home</mat-icon>
+    Startseite
+  </button>
+  <button mat-button>
+    <mat-icon>access_time</mat-icon>
+    Öffnungszeiten
+  </button>
+  <button mat-button>
+    <mat-icon>contacts</mat-icon>
+    Kontakt
+  </button>
+  <span class="toolbar-spacer"></span>
+  <div class="theme-control">
+    <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
+    <button mat-icon-button>
+      @if (themeService.themeSignal() === 'light'){
+        <mat-icon>brightness_5</mat-icon>
+      } @else {
+        <mat-icon>bedtime</mat-icon>
+      }
+    </button>
+  </div>
+</mat-toolbar>
