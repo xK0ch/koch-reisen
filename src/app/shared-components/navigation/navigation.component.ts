@@ -6,6 +6,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 import {ThemeService} from "../../services/theme.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navigation',
@@ -14,7 +15,7 @@ import {ThemeService} from "../../services/theme.service";
     MatToolbarModule,
     MatButtonModule,
     MatIconModule, MatSlideToggle,
-    ReactiveFormsModule
+    ReactiveFormsModule, RouterLink
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'

@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import {HomePageComponent} from "./views/home-page/home-page.component";
+import {OpeningHoursComponent} from "./views/opening-hours/opening-hours.component";
+import {ContactComponent} from "./views/contact/contact.component";
 
 const SLUG_HOME: string = 'home';
 const SLUG_OPENING_HOURS: string = 'opening-hours';
@@ -15,8 +17,12 @@ export const routes: Routes = [
     path: SLUG_HOME,
     component: HomePageComponent,
   },
-  // {
-  //   path: SLUG_CURRENT_WEATHER,
-  //   component: CurrentWeatherComponent,
-  // }
+  {
+    path: SLUG_OPENING_HOURS,
+    component: OpeningHoursComponent,
+  },
+  {
+    path: SLUG_CONTACT,
+    component: ContactComponent,
+  },
 ];
