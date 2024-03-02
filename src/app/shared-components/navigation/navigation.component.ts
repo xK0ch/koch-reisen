@@ -1,10 +1,10 @@
-import {Component, HostBinding, inject, OnInit} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule, MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
-import {FormControl, ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from "@angular/forms";
 import {ThemeService} from "../../services/theme.service";
 import {RouterLink} from "@angular/router";
 
@@ -12,10 +12,12 @@ import {RouterLink} from "@angular/router";
   selector: 'app-navigation',
   standalone: true,
   imports: [
-    MatToolbarModule,
     MatButtonModule,
-    MatIconModule, MatSlideToggle,
-    ReactiveFormsModule, RouterLink
+    MatIconModule,
+    MatSlideToggle,
+    MatToolbarModule,
+    ReactiveFormsModule,
+    RouterLink,
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'

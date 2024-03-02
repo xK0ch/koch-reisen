@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import {MatTableModule} from "@angular/material/table";
-import {OFFICE_HOURS} from "../../models/office-hours";
+import { PdfViewerModule } from "ng2-pdf-viewer";
 
 @Component({
   selector: 'app-opening-hours',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [PdfViewerModule],
   templateUrl: './opening-hours.component.html',
   styleUrl: './opening-hours.component.scss'
 })
 export class OpeningHoursComponent {
-  displayedColumns: string[] = ['weekDay', 'date', 'start', 'end', 'remark'];
-  dataSource = OFFICE_HOURS;
+
 }
