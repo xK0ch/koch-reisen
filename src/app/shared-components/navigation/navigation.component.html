@@ -4,7 +4,7 @@
     <mat-icon>home</mat-icon>
     Startseite
   </button>
-  <button mat-button routerLink="/opening-hours">
+  <button mat-button routerLink="/office-hours">
     <mat-icon>access_time</mat-icon>
     Bürozeiten
   </button>
@@ -17,9 +17,9 @@
     <mat-slide-toggle (click)="toggleTheme()"></mat-slide-toggle>
     <button mat-icon-button>
       @if (themeService.themeSignal() === 'light'){
-        <mat-icon>brightness_5</mat-icon>
+        <mat-icon>light_mode</mat-icon>
       } @else {
-        <mat-icon>bedtime</mat-icon>
+        <mat-icon>dark_mode</mat-icon>
       }
     </button>
   </div>

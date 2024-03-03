@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavigationComponent } from './navigation.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ActivatedRoute} from "@angular/router";
 
 describe('NavigationComponent', () => {
   let component: NavigationComponent;
@@ -8,10 +10,27 @@ describe('NavigationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavigationComponent]
+      imports: [
+        NavigationComponent,
+        HttpClientModule,
+      ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: {
+                get(): string {
+                  return '123';
+                },
+              },
+            },
+          },
+        },
+      ],
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(NavigationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
