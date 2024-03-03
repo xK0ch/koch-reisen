@@ -59,3 +59,9 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('./assets/Avenir.ttc') format('truetype');
+  font-weight: bold;
+}
