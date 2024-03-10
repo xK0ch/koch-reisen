@@ -1,12 +1,17 @@
-import {Injectable, signal} from '@angular/core';
+import {
+  Injectable,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
-  themeSignal = signal<string>("light");
 
-  updateTheme() {
-    this.themeSignal.update((value) => (value === "light" ? "dark" : "light"));
+  themeSignal: WritableSignal<string> = signal<string>('light');
+
+  updateTheme(): void {
+    this.themeSignal.update((value): string => (value === 'light' ? 'dark' : 'light'));
   }
 }

@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
-import {HomePageComponent} from "./views/home-page/home-page.component";
-import {ContactComponent} from "./views/contact/contact.component";
-import {OfficeHoursComponent} from "./views/office-hours/office-hours.component";
 
-const SLUG_HOME: string = 'home';
-const SLUG_OPENING_HOURS: string = 'office-hours';
-const SLUG_CONTACT: string = 'contact';
+import { ContactComponent } from './views/contact/contact.component';
+import { HomePageComponent } from './views/home-page/home-page.component';
+import { OfficeHoursComponent } from './views/office-hours/office-hours.component';
+
+const SLUG_HOME = 'home';
+const SLUG_OPENING_HOURS = 'office-hours';
+const SLUG_CONTACT = 'contact';
 
 export const routes: Routes = [
   {

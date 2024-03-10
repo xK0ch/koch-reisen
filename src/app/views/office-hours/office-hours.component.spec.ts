@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+} from '@angular/core/testing';
 
 import { OfficeHoursComponent } from './office-hours.component';
 
@@ -8,9 +11,9 @@ describe('OfficeHoursComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OfficeHoursComponent]
+      imports: [OfficeHoursComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(OfficeHoursComponent);
     component = fixture.componentInstance;

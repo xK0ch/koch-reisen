@@ -1,7 +1,14 @@
-import { Component } from '@angular/core';
-import {NavigationComponent} from "../../shared-components/navigation/navigation.component";
-import {MatGridList, MatGridTile} from "@angular/material/grid-list";
-import {NgOptimizedImage} from "@angular/common";
+import { NgOptimizedImage } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
+import {
+  MatGridList,
+  MatGridTile,
+} from '@angular/material/grid-list';
+
+import { NavigationComponent } from '../../shared-components/navigation/navigation.component';
 
 @Component({
   selector: 'app-home-page',
@@ -10,10 +17,11 @@ import {NgOptimizedImage} from "@angular/common";
     MatGridList,
     MatGridTile,
     NavigationComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
   ],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
+  styleUrl: './home-page.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent {
 

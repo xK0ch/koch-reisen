@@ -1,7 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import {HttpClientModule} from "@angular/common/http";
-import {ActivatedRoute} from "@angular/router";
 
 describe('AppComponent', () => {
   beforeEach(async () => {

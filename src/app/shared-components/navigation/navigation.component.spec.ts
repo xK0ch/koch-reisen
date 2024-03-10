@@ -1,8 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+import {
+  ComponentFixture,
+  TestBed,
+} from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
 
 import { NavigationComponent } from './navigation.component';
-import {HttpClientModule} from "@angular/common/http";
-import {ActivatedRoute} from "@angular/router";
 
 describe('NavigationComponent', () => {
   let component: NavigationComponent;
@@ -29,7 +32,7 @@ describe('NavigationComponent', () => {
         },
       ],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NavigationComponent);
     component = fixture.componentInstance;
