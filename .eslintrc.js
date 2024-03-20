@@ -7,4 +7,7 @@ module.exports = {
     '@ewerk/eslint-config/typescript',
     '@ewerk/eslint-config/angular',
   ],
+  rules: {
+    'no-new-native-nonconstructor': 'off',
+  },
 };
