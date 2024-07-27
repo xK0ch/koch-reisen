@@ -12,7 +12,11 @@ import { NavigationComponent } from './shared-components/navigation/navigation.c
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent, NgClass],
+  imports: [
+    RouterOutlet,
+    NavigationComponent,
+    NgClass,
+  ],
   templateUrl: './app.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

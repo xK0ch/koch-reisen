@@ -9,7 +9,7 @@ describe('OfficeHoursComponent', () => {
   let component: OfficeHoursComponent;
   let fixture: ComponentFixture<OfficeHoursComponent>;
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     await TestBed.configureTestingModule({
       imports: [OfficeHoursComponent],
     })
