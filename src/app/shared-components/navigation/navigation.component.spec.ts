@@ -1,4 +1,7 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import {
   ComponentFixture,
   TestBed,
@@ -13,23 +16,23 @@ describe('NavigationComponent', () => {
 
   beforeEach(async() => {
     await TestBed.configureTestingModule({
-    imports: [NavigationComponent],
-    providers: [
+      imports: [NavigationComponent],
+      providers: [
         {
-            provide: ActivatedRoute,
-            useValue: {
-                snapshot: {
-                    paramMap: {
-                        get(): string {
-                            return '123';
-                        },
-                    },
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: {
+                get(): string {
+                  return '123';
                 },
+              },
             },
+          },
         },
         provideHttpClient(withInterceptorsFromDi()),
-    ]
-})
+      ],
+    })
       .compileComponents();
 
     fixture = TestBed.createComponent(NavigationComponent);

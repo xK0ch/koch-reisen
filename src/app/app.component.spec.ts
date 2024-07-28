@@ -1,4 +1,7 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,23 +10,23 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async() => {
     await TestBed.configureTestingModule({
-    imports: [AppComponent],
-    providers: [
+      imports: [AppComponent],
+      providers: [
         {
-            provide: ActivatedRoute,
-            useValue: {
-                snapshot: {
-                    paramMap: {
-                        get(): string {
-                            return '123';
-                        },
-                    },
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: {
+                get(): string {
+                  return '123';
                 },
+              },
             },
+          },
         },
         provideHttpClient(withInterceptorsFromDi()),
-    ]
-}).compileComponents();
+      ],
+    }).compileComponents();
   });
 
   it('should create the app', () => {
