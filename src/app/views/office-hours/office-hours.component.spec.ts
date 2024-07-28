@@ -9,14 +9,12 @@ describe('OfficeHoursComponent', () => {
   let component: OfficeHoursComponent;
   let fixture: ComponentFixture<OfficeHoursComponent>;
 
-  beforeEach(async() => {
-    await TestBed.configureTestingModule({
-      imports: [OfficeHoursComponent],
-    }).compileComponents();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+    });
 
     fixture = TestBed.createComponent(OfficeHoursComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

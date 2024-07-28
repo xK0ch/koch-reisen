@@ -14,32 +14,28 @@ describe('NavigationComponent', () => {
   let component: NavigationComponent;
   let fixture: ComponentFixture<NavigationComponent>;
 
-  beforeEach(async() => {
-    await TestBed.configureTestingModule({
-      imports: [NavigationComponent],
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       providers: [
+        provideHttpClient(),
         {
           provide: ActivatedRoute,
           useValue: {
             snapshot: {
-              paramMap: {
-                get(): string {
-                  return '123';
-                },
-              },
+              data: {},
             },
           },
         },
-        provideHttpClient(withInterceptorsFromDi()),
+        withInterceptorsFromDi(),
       ],
-    }).compileComponents();
+    });
 
     fixture = TestBed.createComponent(NavigationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+

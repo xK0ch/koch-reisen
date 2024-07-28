@@ -8,25 +8,21 @@ import { ActivatedRoute } from '@angular/router';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async() => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       providers: [
+        provideHttpClient(),
         {
           provide: ActivatedRoute,
           useValue: {
             snapshot: {
-              paramMap: {
-                get(): string {
-                  return '123';
-                },
-              },
+              data: {},
             },
           },
         },
-        provideHttpClient(withInterceptorsFromDi()),
+        withInterceptorsFromDi(),
       ],
-    }).compileComponents();
+    });
   });
 
   it('should create the app', () => {

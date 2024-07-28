@@ -3,14 +3,13 @@ import { TestBed } from '@angular/core/testing';
 import { ThemeService } from './theme.service';
 
 describe('ThemeService', () => {
-  let service: ThemeService;
-
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ThemeService);
+    TestBed.configureTestingModule({
+    });
   });
 
   it('should be created', () => {
+    const service: ThemeService = TestBed.inject(ThemeService);
     expect(service).toBeTruthy();
   });
 });

@@ -9,14 +9,12 @@ describe('HomePageComponent', () => {
   let component: HomePageComponent;
   let fixture: ComponentFixture<HomePageComponent>;
 
-  beforeEach(async() => {
-    await TestBed.configureTestingModule({
-      imports: [HomePageComponent],
-    }).compileComponents();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+    });
 
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
