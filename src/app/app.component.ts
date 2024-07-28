@@ -21,6 +21,5 @@ import { NavigationComponent } from './shared-components/navigation/navigation.c
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-
   themeService: ThemeService = inject(ThemeService);
 }

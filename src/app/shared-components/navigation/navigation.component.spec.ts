@@ -32,8 +32,7 @@ describe('NavigationComponent', () => {
         },
         provideHttpClient(withInterceptorsFromDi()),
       ],
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NavigationComponent);
     component = fixture.componentInstance;

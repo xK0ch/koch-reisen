@@ -8,7 +8,6 @@ import {
   providedIn: 'root',
 })
 export class ThemeService {
-
   themeSignal: WritableSignal<string> = signal<string>('light');
 
   updateTheme(): void {

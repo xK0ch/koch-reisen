@@ -23,6 +23,4 @@ import { NavigationComponent } from '../../shared-components/navigation/navigati
   styleUrl: './home-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePageComponent {
-
-}
+export class HomePageComponent {}

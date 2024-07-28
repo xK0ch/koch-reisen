@@ -12,6 +12,4 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   styleUrl: './office-hours.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class OfficeHoursComponent {
-
-}
+export class OfficeHoursComponent {}

@@ -12,6 +12,4 @@ import { MatIcon } from '@angular/material/icon';
   styleUrl: './contact.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactComponent {
-
-}
+export class ContactComponent {}

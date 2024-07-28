@@ -12,8 +12,7 @@ describe('OfficeHoursComponent', () => {
   beforeEach(async() => {
     await TestBed.configureTestingModule({
       imports: [OfficeHoursComponent],
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(OfficeHoursComponent);
     component = fixture.componentInstance;

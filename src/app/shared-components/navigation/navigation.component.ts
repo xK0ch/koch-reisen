@@ -32,17 +32,10 @@ import { ThemeService } from '../../services/theme.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavigationComponent {
-
   themeService: ThemeService = inject(ThemeService);
 
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer,
-  ) {
-    this.matIconRegistry.addSvgIcon(
-      'airplane',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/koch-reisen-airplane.svg'),
-    );
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon('airplane', this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/koch-reisen-airplane.svg'));
   }
 
   toggleTheme(): void {
