@@ -1,8 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-} from '@angular/core';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+import {Component} from '@angular/core';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
 
 @Component({
   selector: 'app-office-hours',
@@ -10,6 +7,6 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   imports: [PdfViewerModule],
   templateUrl: './office-hours.component.html',
   styleUrl: './office-hours.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class OfficeHoursComponent {}
+export class OfficeHoursComponent {
+}
