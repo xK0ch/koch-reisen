@@ -1,30 +1,44 @@
 <mat-toolbar>
-  <mat-icon
-    svgIcon="airplane"
-    class="airplane"
-  ></mat-icon>
-  <button
-    mat-button
-    class="first-button"
-    routerLink="/home"
-  >
-    <mat-icon>home</mat-icon>
-    Startseite
-  </button>
-  <button
-    mat-button
-    routerLink="/office-hours"
-  >
-    <mat-icon>access_time</mat-icon>
-    Bürozeiten
-  </button>
-  <button
-    mat-button
-    routerLink="/contact"
-  >
-    <mat-icon>contacts</mat-icon>
-    Kontakt
-  </button>
+  @if (!(isSmallScreen$ | async)) {
+    <mat-icon
+      svgIcon="airplane"
+      class="airplane"
+    ></mat-icon>
+    <button
+      mat-button
+      class="first-button"
+      [routerLink]="SLUG_HOME"
+    >
+      <mat-icon>home</mat-icon>
+      Startseite
+    </button>
+    <button
+      mat-button
+      [routerLink]="SLUG_OPENING_HOURS"
+    >
+      <mat-icon>access_time</mat-icon>
+      Bürozeiten
+    </button>
+    <button
+      mat-button
+      [routerLink]="SLUG_CONTACT"
+    >
+      <mat-icon>contacts</mat-icon>
+      Kontakt
+    </button>
+  }
+
+  @if (isSmallScreen$ | async) {
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  }
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="SLUG_HOME">Startseite</button>
+    <button mat-menu-item [routerLink]="SLUG_OPENING_HOURS">Bürozeiten</button>
+    <button mat-menu-item [routerLink]="SLUG_CONTACT">Kontakt</button>
+  </mat-menu>
+
   <span class="toolbar-spacer"></span>
   <div class="theme-control">
     <mat-slide-toggle
@@ -33,9 +47,9 @@
     ></mat-slide-toggle>
     <button mat-icon-button>
       @if (themeService.themeSignal() === 'light') {
-      <mat-icon>light_mode</mat-icon>
+        <mat-icon>light_mode</mat-icon>
       } @else {
-      <mat-icon>dark_mode</mat-icon>
+        <mat-icon>dark_mode</mat-icon>
       }
     </button>
   </div>
