@@ -37,12 +37,10 @@
       (click)="toggleTheme()"
       checked
     ></mat-slide-toggle>
-    <button mat-icon-button>
       @if (themeService.themeSignal() === 'light') {
         <mat-icon>light_mode</mat-icon>
       } @else {
         <mat-icon>dark_mode</mat-icon>
       }
-    </button>
   </div>
 </mat-toolbar>

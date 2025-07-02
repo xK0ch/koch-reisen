@@ -5,7 +5,10 @@ import {MatIcon} from "@angular/material/icon";
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [NgOptimizedImage, MatIcon],
+  imports: [
+    MatIcon,
+    NgOptimizedImage,
+  ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
 })
