@@ -1,6 +1,5 @@
 import {Routes} from '@angular/router';
 
-import {ContactComponent} from './views/contact/contact.component';
 import {HomePageComponent} from './views/home-page/home-page.component';
 import {OfficeHoursComponent} from './views/office-hours/office-hours.component';
 
