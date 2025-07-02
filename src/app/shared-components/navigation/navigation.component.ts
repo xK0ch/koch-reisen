@@ -51,6 +51,6 @@ export class NavigationComponent {
   }
 
   toggleTheme(): void {
-    this.themeService.updateTheme();
+    this.themeService.toggleTheme();
   }
 }

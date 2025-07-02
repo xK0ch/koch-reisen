@@ -1,4 +1,4 @@
-import {Injectable, signal, WritableSignal} from '@angular/core';
+import {Injectable, signal, WritableSignal, effect} from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -6,7 +6,16 @@ import {Injectable, signal, WritableSignal} from '@angular/core';
 export class ThemeService {
   themeSignal: WritableSignal<string> = signal<string>('light');
 
-  updateTheme(): void {
-    this.themeSignal.update((value): string => (value === 'light' ? 'dark' : 'light'));
+  constructor() {
+    effect(() => {
+      const theme = this.themeSignal();
+      const body = document.body;
+      body.classList.remove('light', 'dark');
+      body.classList.add(theme);
+    });
+  }
+
+  toggleTheme(): void {
+    this.themeSignal.update((value) => (value === 'light' ? 'dark' : 'light'));
   }
 }
