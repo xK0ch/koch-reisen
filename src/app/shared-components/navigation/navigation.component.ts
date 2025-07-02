@@ -11,7 +11,7 @@ import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 import {map, Observable} from "rxjs";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {AsyncPipe} from "@angular/common";
-import {SLUG_CONTACT, SLUG_HOME, SLUG_OPENING_HOURS} from '../../app.routes';
+import {SLUG_HOME, SLUG_OPENING_HOURS} from '../../app.routes';
 
 @Component({
   selector: 'app-navigation',
@@ -35,7 +35,6 @@ export class NavigationComponent {
 
   SLUG_HOME: string = SLUG_HOME
   SLUG_OPENING_HOURS: string = SLUG_OPENING_HOURS;
-  SLUG_CONTACT: string = SLUG_CONTACT;
 
   themeService = inject(ThemeService);
   #matIconRegistry = inject(MatIconRegistry);

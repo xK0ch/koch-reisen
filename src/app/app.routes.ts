@@ -6,7 +6,6 @@ import {OfficeHoursComponent} from './views/office-hours/office-hours.component'
 
 export const SLUG_HOME = 'home';
 export const SLUG_OPENING_HOURS = 'office-hours';
-export const SLUG_CONTACT = 'contact';
 
 export const routes: Routes = [
   {
@@ -21,9 +20,5 @@ export const routes: Routes = [
   {
     path: SLUG_OPENING_HOURS,
     component: OfficeHoursComponent,
-  },
-  {
-    path: SLUG_CONTACT,
-    component: ContactComponent,
   },
 ];

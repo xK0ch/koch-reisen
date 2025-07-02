@@ -19,13 +19,6 @@
       <mat-icon>access_time</mat-icon>
       Bürozeiten
     </button>
-    <button
-      mat-button
-      [routerLink]="SLUG_CONTACT"
-    >
-      <mat-icon>contacts</mat-icon>
-      Kontakt
-    </button>
   }
 
   @if (isSmallScreen$ | async) {
@@ -36,7 +29,6 @@
   <mat-menu #menu="matMenu">
     <button mat-menu-item [routerLink]="SLUG_HOME">Startseite</button>
     <button mat-menu-item [routerLink]="SLUG_OPENING_HOURS">Bürozeiten</button>
-    <button mat-menu-item [routerLink]="SLUG_CONTACT">Kontakt</button>
   </mat-menu>
 
   <span class="toolbar-spacer"></span>
