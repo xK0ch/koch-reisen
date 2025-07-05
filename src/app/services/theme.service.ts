@@ -4,7 +4,7 @@ import {Injectable, signal, WritableSignal, effect} from '@angular/core';
   providedIn: 'root',
 })
 export class ThemeService {
-  themeSignal: WritableSignal<string> = signal<string>('light');
+  themeSignal: WritableSignal<string> = signal<string>('dark');
 
   constructor() {
     effect(() => {
