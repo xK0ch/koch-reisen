@@ -32,9 +32,9 @@ describe('OfficeHoursComponent', () => {
     expect(component.pdfUrl).toBe('https://www.koch-reisen.de/pdfs/office_hours.pdf');
   });
 
-  it('should render an iframe for the PDF', () => {
-    const iframe = fixture.nativeElement.querySelector('iframe');
-    expect(iframe).toBeTruthy();
+  it('should render the extended PDF viewer', () => {
+    const viewer = fixture.nativeElement.querySelector('ngx-extended-pdf-viewer');
+    expect(viewer).toBeTruthy();
   });
 
   it('should have a download link with the correct PDF URL', () => {

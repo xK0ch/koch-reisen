@@ -1,17 +1,13 @@
-import { Component, inject } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component } from '@angular/core';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @Component({
   selector: 'app-office-hours',
   standalone: true,
+  imports: [NgxExtendedPdfViewerModule],
   templateUrl: './office-hours.html',
   styleUrl: './office-hours.scss',
 })
 export class OfficeHoursComponent {
-  private readonly sanitizer = inject(DomSanitizer);
-
   readonly pdfUrl = 'https://www.koch-reisen.de/pdfs/office_hours.pdf';
-
-  readonly safePdfUrl: SafeResourceUrl =
-    this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl);
 }
