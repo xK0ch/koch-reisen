@@ -1,0 +1,25 @@
+<section id="buerozeiten" class="office-hours">
+  <div class="office-hours__container">
+    <h2 class="office-hours__heading">Bürozeiten</h2>
+
+    <div class="office-hours__pdf-wrapper">
+      <iframe
+        [src]="safePdfUrl"
+        class="office-hours__pdf"
+        title="Bürozeiten"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="office-hours__actions">
+      <a
+        [href]="pdfUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="office-hours__btn"
+      >
+        PDF öffnen / herunterladen
+      </a>
+    </div>
+  </div>
+</section>

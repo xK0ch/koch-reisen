@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="header__container">
+    <a href="#" class="header__logo" aria-label="Koch Reisen – Zur Startseite">
+      <img
+        src="koch-reisen-airplane.svg"
+        alt="Koch Reisen Logo"
+        class="header__logo-img"
+      />
+      <span class="header__brand">Koch Reisen</span>
+    </a>
+
+    <button
+      class="header__mobile-toggle"
+      [class.header__mobile-toggle--open]="mobileMenuOpen"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="mobileMenuOpen"
+      aria-label="Navigation öffnen"
+      type="button"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="header__nav" [class.header__nav--open]="mobileMenuOpen" aria-label="Hauptnavigation">
+      <ul class="header__nav-list">
+        @for (link of navLinks; track link.id) {
+          <li class="header__nav-item">
+            <a
+              [href]="'#' + link.id"
+              class="header__nav-link"
+              (click)="scrollToSection(link.id, $event)"
+            >{{ link.label }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

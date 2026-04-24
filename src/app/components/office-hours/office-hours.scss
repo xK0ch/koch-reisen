@@ -1,0 +1,70 @@
+.office-hours {
+  background-color: #f9fafb;
+  padding: 5rem 1.5rem;
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #e30018;
+      margin: 0.75rem auto 0;
+    }
+  }
+
+  &__pdf-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+  }
+
+  &__pdf {
+    width: 100%;
+    height: 700px;
+    border: none;
+    display: block;
+
+    @media (max-width: 768px) {
+      height: 480px;
+    }
+  }
+
+  &__actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e30018;
+    color: #ffffff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #c00015;
+      text-decoration: none;
+    }
+  }
+}
