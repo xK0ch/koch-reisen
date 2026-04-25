@@ -1,6 +1,6 @@
 # Koch Reisen
 
-Website for the travel agency Anja Koch — a modern, responsive Angular frontend.
+Website for the travel agency Anja Koch, a modern and responsive Angular frontend.
 
 ## Contents
 
